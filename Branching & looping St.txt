@@ -1,0 +1,103 @@
+Branching and Looping Statements Task:
+
+1) Print numbers from 10 to 50--------------
+public class Main {
+    public static void main(String[] args) {
+        int i = 10;
+        while(i <= 50){
+            System.out.println(i);
+            i++;
+        }
+    }
+}
+
+2) Given numbers is positive or negative---------------
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+              Scanner obj = new Scanner(System.in);
+	    System.out.println("enter the number ");
+		int n=obj.nextInt();
+		if(n > 0){
+			System.out.println("entered number is positive");
+		}
+		else {
+			System.out.println("entered number is negative");   }
+                        }
+              }
+
+3) Reverse a number----------------------
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        
+        Scanner obj = new Scanner(System.in);
+	    System.out.println("enter the number ");
+		int n=obj.nextInt();
+	    int reverse = 0;
+        while(n != 0){
+            int remainder = n % 10;
+            reverse = reverse * 10 + remainder;
+            n = n / 10;
+        }
+        System.out.println(reverse);
+    }
+}
+
+4) Find smallest number among 3 numbers------------------
+ import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        
+        Scanner obj = new Scanner(System.in);
+	    System.out.println("enter the number ");
+	    int smallest = Integer.MAX_VALUE;
+		for(int i=0;i<3;i++){
+		    int num = obj.nextInt();
+		    if(num < smallest){
+		        smallest = num;
+		    }
+		}
+		System.out.println("smallest number is "+smallest);
+             }
+            }
+
+5) Purchase amount as input and final output with discount applied--------------
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        
+        Scanner obj = new Scanner(System.in);
+	    System.out.println("enter the amount ");
+	    int amount = obj.nextInt();
+	    int finalAmount = 0;
+	   if(amount <= 500){
+	       finalAmount = amount;
+	   }
+	   else if (amount > 500 && amount <= 1000){
+	       finalAmount = amount * (10/100);
+	   }
+	   else{
+	       finalAmount = amount * (20/100);
+	   }
+	   System.out.println("The final amount is "+finalAmount);
+    }
+}
+
+6) Print the Pattern---------------------
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        for(int i=5;i>=1;i--){
+            for(int k=5; k>i; k--){
+                System.out.print(k+" ");   
+            }           
+            for(int j=i;j>=1;j--){
+                System.out.print(i+" ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
