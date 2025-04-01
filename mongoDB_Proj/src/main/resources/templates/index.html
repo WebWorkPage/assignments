@@ -24,6 +24,25 @@
         <button type="submit">Submit</button>
     </form>
 
+   <h2>List of employees</h2>
+   <table border="2px">
+    <thead>
+     <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Location</th>
+      <th>View</th>
+     </tr>
+    </thead>
+    <tbody>
+       <tr th:each="employee : ${employees}">
+                                        <td th:text="${employee.name}"></td>
+                                        <td th:text="${employee.email}"></td>
+                                        <td th:text="${employee.location}"></td>
+                                        <td><a th:href="@{/display/{id}(id=${employee.id})}" class="btn btn-primary">view</a></td>
+        </tr>
+    </tbody>
+   </table> 
     
 </body>
 </html>
