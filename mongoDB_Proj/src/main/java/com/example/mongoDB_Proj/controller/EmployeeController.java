@@ -18,7 +18,6 @@ import com.example.mongoDB_Proj.model.Employee;
 import com.example.mongoDB_Proj.service.EmployeeService;
 
 @Controller
-@RequestMapping("/employees")
 public class EmployeeController {
 	@Autowired
 	private EmployeeService employeeService;
@@ -27,13 +26,14 @@ public class EmployeeController {
     @GetMapping("/")
     public String showEmployeeForm(Model model) {
         model.addAttribute("employee", new Employee());
-//        model.addAttribute("employees", employeeService.getAllEmployees());
+        model.addAttribute("employees", employeeService.getAllEmployees());
+	System.out.println(employeeService.getAllEmployees().size());
         return "index";
     }
 
     // Save Employee
-    @RequestMapping("/add")
-    public String saveEmployee(@ModelAttribute Employee employee) {
+    @PostMapping("/add")
+    public String saveEmployee(@ModelAttribute("employee") Employee employee) {
         employeeService.saveEmployee(employee);
         return "redirect:/";
     }
@@ -45,6 +45,5 @@ public class EmployeeController {
         model.addAttribute("employeeDetail", employee);
         return "employee_detail";
     }
-
 	
 }
