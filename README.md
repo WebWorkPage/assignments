@@ -1,1 +1,1 @@
-# This repo contains assignments posted by guvi
+# This repo contains assignments from guvi
