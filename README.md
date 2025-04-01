@@ -1,1 +1,1 @@
-# This repo contains daily task posted by guvi
+# This repo contains assignments posted by guvi
